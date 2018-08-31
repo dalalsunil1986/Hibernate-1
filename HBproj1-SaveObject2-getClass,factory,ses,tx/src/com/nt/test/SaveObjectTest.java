@@ -25,9 +25,18 @@ public class SaveObjectTest {
 		
 		cfg=new Configuration();
 		
+		
+		
 		//Hold hibernate configuration(cfg) file and Hibernate mapping file
 		
 		cfg=cfg.configure("/com/nt/cfgs/hibernate.cfg.xml");
+		
+		//or
+		
+		cfg=cfg.configure();
+		
+		
+		
 		
 		//Build SessionFactory Object
 		
@@ -45,7 +54,7 @@ public class SaveObjectTest {
 		
 		emp=new Employee();
 		
-		emp.setEid(111);
+		emp.setEid(115);
 		emp.setEname("sankar");
 		emp.setEmail("karrasankar158@gmail.com");
 		emp.setSalary(1500);
