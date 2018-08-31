@@ -41,7 +41,7 @@ public class SaveObjectTest {
 		
 		emp=new Employee();
 		
-		emp.setEid(101);
+		emp.setEid(102);
 		emp.setEname("sankar");
 		emp.setEmail("karrasankar158@gmail.com");
 		emp.setSalary(1500);
