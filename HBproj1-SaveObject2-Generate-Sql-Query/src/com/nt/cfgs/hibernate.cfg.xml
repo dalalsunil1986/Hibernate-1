@@ -19,8 +19,9 @@
 <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:ORCL</property>
 <property name="hibernate.connection.username">scott</property>
 <property name="hibernate.connection.password">tiger</property>
-<property name="hibernate.show_sql">true</property>
 
+<!--  <property name="hibernate.show_sql">true</property>Here hibernate is optional-->
+<property name="show_sql">true</property>
 
 <!-- Mapping File -->
 
