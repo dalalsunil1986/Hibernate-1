@@ -8,7 +8,11 @@
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/classmate-1.3.4.jar"/>
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/hibernate-commons-annotations-5.0.4.Final.jar"/>
-	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/hibernate-core-5.3.5.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/hibernate-core-5.3.5.Final.jar" sourcepath="F:/Hibernate-Home/hibernate-release-5.3.5.Final/project/hibernate-core/src">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/F:/Hibernate-Home/hibernate-release-5.3.5.Final.zip!/hibernate-release-5.3.5.Final/documentation/javadocs"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/jandex-2.0.5.Final.jar"/>
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/javassist-3.23.1-GA.jar"/>
 	<classpathentry kind="lib" path="F:/Hibernate-Home/hibernate-release-5.3.5.Final/lib/required/javax.activation-api-1.2.0.jar"/>
