@@ -1,0 +1,30 @@
+
+
+create table employee(eid number(5) primary key,ename varchar(20),email
+varchar(20),salary number(10));
+
+
+
+SQL> desc employee
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                       NOT NULL NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ EMAIL                                              VARCHAR2(30)
+ SALARY                                             NUMBER(10)
+ 
+ CONSOLE OUTPUT:
+ 
+ Generate ID value::30
+Object Saved / Record is Inserted
+
+ SQL OUTPUT:
+ 
+ 
+SQL> select * from employee;
+
+       EID ENAME                EMAIL                              SALARY
+---------- -------------------- ------------------------------ ----------
+       101 sankar               karrasankar158@gmail.com             1500
+  
