@@ -1,0 +1,54 @@
+mysql> desc employee;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| EID    | int(11)      | NO   | PRI | NULL    |       |
+| ENAME  | varchar(255) | YES  |     | NULL    |       |
+| EMAIL  | varchar(255) | YES  |     | NULL    |       |
+| SALARY | float        | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+4 rows in set (0.04 sec)
+
+
+mysql> select * from employee;
++-----+--------+-------------------------+--------+
+| EID | ENAME  | EMAIL                   | SALARY |
++-----+--------+-------------------------+--------+
+|   1 | sankar | karrasankar09@gmail.com |   1500 |
++-----+--------+-------------------------+--------+
+1 row in set (0.16 sec)
+
+create database in mysql::
+
+mysql>show databases;
+
+mysql>create database hibernate;
+
+mysql>connect hibernate;
+
+mysql workbrench::
+
+CREATE TABLE `employee` (
+  `EID` int(11) NOT NULL,
+  `ENAME` varchar(255) DEFAULT NULL,
+  `EMAIL` varchar(255) DEFAULT NULL,
+  `SALARY` float DEFAULT NULL,
+  PRIMARY KEY (`EID`)
+  
+  Table: employee
+Columns:
+EID int(11) PK 
+ENAME varchar(255) 
+EMAIL varchar(255) 
+SALARY float
+
+
+                                         
+ 
+ CONSOLE OUTPUT:
+ 
+ Object Saved / Record is Inserted
+ 
+  OUTPUT:
+ 
+ 
