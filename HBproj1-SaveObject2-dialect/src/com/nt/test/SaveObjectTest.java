@@ -27,9 +27,11 @@ public class SaveObjectTest {
 		
 		//Hold hibernate configuration(cfg) file and Hibernate mapping file
 		
+		
 		cfg=cfg.configure("/com/nt/cfgs/hibernate.cfg.xml");
 		
 		//Build SessionFactory Object
+	
 		
 		factory=cfg.buildSessionFactory();
 		
