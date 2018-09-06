@@ -75,6 +75,14 @@ InsurencePolicy.getPolicyName()
 InsurencePolicy.getPolicyHolderName()
 InsurencePolicy.getTenure()
 101	h	sankar	1000
+
+ Record or Object found, Details::
+
+InsurencePolicy.getPolicyId()
+InsurencePolicy.getPolicyName()
+InsurencePolicy.getPolicyHolderName()
+InsurencePolicy.getTenure()
+101	h	sankar	1000
   
   
  
