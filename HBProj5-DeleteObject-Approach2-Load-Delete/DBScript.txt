@@ -1,0 +1,75 @@
+Query::
+
+
+SQL> create table event(id number(5) primary key,name varchar(20),doe date,pax number(8),location varchar2(15));
+
+Table created.
+
+Inserted records::
+
+
+SQL> insert into  event values(101,'dasara','10-nov-18',1,'razole');
+
+1 row created.
+
+SQL> insert into  event values(102,'divali','10-dec-18',2,'razole');
+
+1 row created.
+
+SQL> insert into  event values(103,'shankranthri','10-jan-18',3,'razole');
+
+1 row created.
+
+desc::
+
+SQL> desc event;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(5)
+ NAME                                               VARCHAR2(20)
+ DOE                                                DATE
+ PAX                                                NUMBER(8)
+ LOCATION                                           VARCHAR2(15)
+
+ select::
+ 
+ 
+SQL> select * from event;
+
+        ID NAME                 DOE              PAX LOCATION
+---------- -------------------- --------- ---------- ---------------
+       101 dasara               10-NOV-18          1 razole
+       102 divali               10-DEC-18          2 razole
+       103 shankranthri         10-JAN-18          3 razole
+       
+       sql>commit;
+       output::
+       
+    Hibernate: 
+    select
+        event0_.ID as ID1_0_0_,
+        event0_.NAME as NAME2_0_0_,
+        event0_.DOE as DOE3_0_0_,
+        event0_.PAX as PAX4_0_0_,
+        event0_.LOCATION as LOCATION5_0_0_ 
+    from
+        EVENT event0_ 
+    where
+        event0_.ID=?
+Hibernate: 
+    delete 
+    from
+        EVENT 
+    where
+        ID=?
+Object Deleted
+
+
+SQL> select * from event;
+
+        ID NAME                 DOE              PAX LOCATION
+---------- -------------------- --------- ---------- ---------------
+       103 shankranthri         10-JAN-18          3 razole
+
+        
+        
