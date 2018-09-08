@@ -42,7 +42,7 @@ public class DeleteObjectTest {
 		
 		catch(HibernateException he) {
 			
-			flag=true;
+			flag=false;
 			
 			he.printStackTrace();
 			
