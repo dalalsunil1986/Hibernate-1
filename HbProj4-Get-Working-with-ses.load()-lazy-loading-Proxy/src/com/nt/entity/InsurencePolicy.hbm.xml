@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!-- EMPLOYEE name capital  recomended -->
+
+
+
+<class name="com.nt.entity.IPolicy" table="INSURENCEPOLICY" lazy="false" proxy="com.nt.entity.IPolicy" >
+
+<!-- Singular ID filed configuration -->
+
+<!-- ID here EID is primary key in SQL Query -->
+
+<id name="policyId" type="int">
+
+<column name="POLICYID" length="7"/>
+
+</id>
+<!-- here string in s in small letter -->
+<property name="policyName" type="string">
+
+<column name="POLICYNAME" length="15"/>
+ 
+</property>
+
+<property name="policyHolderName" type="string">
+
+<column name="POLICYHOLDERNAME" length="15"/>
+ 
+</property>
+
+<property name="tenure" type="int">
+
+<column name="TENURE" length="15"/>
+ 
+</property>
+
+</class>
+
+</hibernate-mapping>
+

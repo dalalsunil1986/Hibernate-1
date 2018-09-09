@@ -1,0 +1,44 @@
+ Query:
+ 
+ create table insurencepolicy(policyId number(8) primary key
+ ,policyName varchar(20),policyHolderName varchar2(20),
+  tenure number(6));
+  
+  SQL> desc insurencepolicy;
+  
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ POLICYID                                  NOT NULL NUMBER(8)
+ POLICYNAME                                         VARCHAR2(20)
+ POLICYHOLDERNAME                                   VARCHAR2(20)
+ TENURE                                             NUMBER(6)
+ 
+ 
+
+SQL> insert into insurencepolicy values(101,'h','sankar',1000);
+
+1 row created.
+
+SQL> insert into insurencepolicy values(102,'k','govardan',1400);
+
+1 row created.
+
+SQL> insert into insurencepolicy values(103,'s','narendra',900);
+
+1 row created.
+
+SQL> select * from insurencepolicy;
+
+  POLICYID POLICYNAME           POLICYHOLDERNAME         TENURE
+---------- -------------------- -------------------- ----------
+       101 h                    sankar                     1000
+       102 k                    govardan                   1400
+       103 s                    narendra                    900
+       
+       
+      output::
+      
+      Record or Object found, Details::
+
+class com.nt.entity.IPolicy$HibernateProxy$tcmx9kjH..class java.lang.Object..[interface com.nt.entity.IPolicy, 
+interface org.hibernate.proxy.HibernateProxy, interface org.hibernate.proxy.ProxyConfiguration]
