@@ -6,7 +6,7 @@
 
 <hibernate-mapping>
 
-<!-- EMPLOYEE name capital  recomended -->
+<!-- Event name capital  recomended -->
 
 <class name="com.nt.entity.Event" table="EVENT">
 
