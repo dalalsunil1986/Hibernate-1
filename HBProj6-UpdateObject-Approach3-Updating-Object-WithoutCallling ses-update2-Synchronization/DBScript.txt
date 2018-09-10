@@ -1,0 +1,86 @@
+
+SQL> create table bankaccount(accno number(5) primary key,holderName varchar2(20),balance number(10,2),type varchar2(10));
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> desc bankaccount;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ACCNO                                                 NOT NULL NUMBER(5)
+ HOLDERNAME                                                     VARCHAR2(20)
+ BALANCE                                                        NUMBER(10,2)
+ TYPE                                                           VARCHAR2(10)
+
+SQL> select * from bankaccount;
+
+no rows selected
+
+
+SQL> insert into bankaccount values(101,'Sa',2345,'sa');
+
+1 row created.
+
+SQL> insert into bankaccount values(102,'Sasi',2045,'cu');
+
+1 row created.
+
+SQL> insert into bankaccount values(103,'vasu',205,'ot');
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+
+SQL> select * from bankaccount;
+
+     ACCNO HOLDERNAME              BALANCE TYPE
+---------- -------------------- ---------- ----------
+       101 kankar                      300 saving
+       102 Sasi                        600 cu
+       103 vasu                       6000 ot
+       
+       
+       
+SQL> update bankaccount set balance=3690 where accno=101;
+
+1 row updated.
+
+SQL> commit;
+
+SQL> select * from bankaccount;
+
+     ACCNO HOLDERNAME              BALANCE TYPE
+---------- -------------------- ---------- ----------
+       101 kankar                     3690 saving
+       102 Sasi                        600 cu
+       103 vasu                       6000 ot
+
+       
+       Hibernate: 
+    select
+        bankaccoun0_.ACCNO as ACCNO1_0_0_,
+        bankaccoun0_.HOLDERNAME as HOLDERNAME2_0_0_,
+        bankaccoun0_.BALANCE as BALANCE3_0_0_,
+        bankaccoun0_.TYPE as TYPE4_0_0_ 
+    from
+        BANKACCOUNT bankaccoun0_ 
+    where
+        bankaccoun0_.ACCNO=?
+BankAccount(accno=101, holderName=kankar, balance=300.0, type=saving)
+Hibernate: 
+    select
+        bankaccoun0_.ACCNO as ACCNO1_0_0_,
+        bankaccoun0_.HOLDERNAME as HOLDERNAME2_0_0_,
+        bankaccoun0_.BALANCE as BALANCE3_0_0_,
+        bankaccoun0_.TYPE as TYPE4_0_0_ 
+    from
+        BANKACCOUNT bankaccoun0_ 
+    where
+        bankaccoun0_.ACCNO=?
+BankAccount(accno=101, holderName=kankar, balance=3690.0, type=saving)
