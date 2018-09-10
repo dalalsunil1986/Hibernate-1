@@ -1,0 +1,60 @@
+SQL> create table brandfactory(custMobileNo number(12) primary key,custName varchar2(20),custAddr varchar2(20),rewardPoints number(5));
+
+Table created.
+
+SQL> select * from brandfactory;
+
+no rows selected
+
+
+
+Hibernate: 
+    select
+        max(CUSTMOBILENO) 
+    from
+        BRANDFACTORY
+Hibernate: 
+    insert 
+    into
+        BRANDFACTORY
+        (CUSTNAME, CUSTADDR, REWARDPOINTS, CUSTMOBILENO) 
+    values
+        (?, ?, ?, ?)
+Object Updated
+
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+
+   999999999 Sankar               Razole                          1
+   
+   test2::
+   
+   Hibernate: 
+    select
+        brandfacto_.CUSTMOBILENO,
+        brandfacto_.CUSTNAME as CUSTNAME2_0_,
+        brandfacto_.CUSTADDR as CUSTADDR3_0_,
+        brandfacto_.REWARDPOINTS as REWARDPOINTS4_0_ 
+    from
+        BRANDFACTORY brandfacto_ 
+    where
+        brandfacto_.CUSTMOBILENO=?
+Hibernate: 
+    update
+        BRANDFACTORY 
+    set
+        CUSTNAME=?,
+        CUSTADDR=?,
+        REWARDPOINTS=? 
+    where
+        CUSTMOBILENO=?
+Object Updated
+
+
+SQL> select * from brandfactory;
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+  9999999999 Sankar               AP                              8
+   999999999 Sankar               Razole                          1
