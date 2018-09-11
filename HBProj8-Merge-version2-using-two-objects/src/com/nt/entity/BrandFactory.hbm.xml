@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!--table name  BANKACCOUNT capital recomended -->
+
+<class name="com.nt.entity.BrandFactory" table="BRANDFACTORY" >
+
+<!-- Singular ID field configuration -->
+
+
+
+<id name="custMobileNo" type="long">
+
+<column name="CUSTMOBILENO" length="12"/>
+
+</id>
+
+
+<property name="custName" type="string">
+
+<column name="CUSTNAME" length="20"></column>
+
+</property>
+
+<property name="custAddr" type="string">
+
+<column name="CUSTADDR" length="20" ></column>
+
+</property>
+
+<property name="rewardPoints" type="int">
+
+<column name="REWARDPOINTS" length="5"></column>
+
+</property>
+
+</class>
+
+</hibernate-mapping>
