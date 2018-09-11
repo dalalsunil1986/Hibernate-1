@@ -1,0 +1,45 @@
+SQL> create table brandfactory(custMobileNo number(12) primary key,custName varchar2(20),custAddr varchar2(20),rewardPoints number(5));
+
+Table created.
+
+SQL> select * from brandfactory;
+
+no rows selected
+
+
+
+modify::after compile::all values modify::
+
+BrandFactory::0-prameter constructor
+After Save::BrandFactory(custMobileNo=99999999, custName=Sanka, custAddr=tanuku, rewardPoints=81)
+After Update::BrandFactory(custMobileNo=99999999, custName=Sanka, custAddr=tanuku, rewardPoints=81)
+Hibernate: 
+    insert 
+    into
+        BRANDFACTORY
+        (CUSTNAME, CUSTADDR, REWARDPOINTS, CUSTMOBILENO) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        BRANDFACTORY 
+    set
+        CUSTNAME=?,
+        CUSTADDR=?,
+        REWARDPOINTS=? 
+    where
+        CUSTMOBILENO=?
+Object Updated
+
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+  1.0000E+10 Sankar               AP                              8
+     9999999 Sankar               AP                              8
+       99999 Sankar               AP                              8
+  1.0000E+10 Sankar1              AP                              8
+    99999999 Sanka                tanuku                         81
+  9999999999 Sankar1              AP                              8
+   999999999 Sankar               Razole                          1
+
+7 rows selected.
