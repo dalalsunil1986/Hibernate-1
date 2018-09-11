@@ -1,0 +1,25 @@
+SQL> create table brandfactory(custMobileNo number(12) primary key,custName varchar2(20),custAddr varchar2(20),rewardPoints number(5));
+
+Table created.
+
+SQL> select * from brandfactory;
+
+no rows selected
+
+
+choose correct custmobileno and last add L
+
+Hibernate: 
+    select
+        brandfacto0_.CUSTMOBILENO as CUSTMOBILENO1_0_0_,
+        brandfacto0_.CUSTNAME as CUSTNAME2_0_0_,
+        brandfacto0_.CUSTADDR as CUSTADDR3_0_0_,
+        brandfacto0_.REWARDPOINTS as REWARDPOINTS4_0_0_ 
+    from
+        BRANDFACTORY brandfacto0_ 
+    where
+        brandfacto0_.CUSTMOBILENO=?
+ BrandFactory::0-prameter constructor
+BrandFactory(custMobileNo=999999, custName=Sankar1, custAddr=A, rewardPoints=81)
+isDirty()::?false
+isDirty()::true
