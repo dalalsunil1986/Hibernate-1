@@ -1,0 +1,66 @@
+SQL> create table brandfactory(custMobileNo number(12) primary key,custName varchar2(20),custAddr varchar2(20),rewardPoints number(5));
+
+Table created.
+
+SQL> select * from brandfactory;
+
+no rows selected
+
+
+
+modify::after compile::all values modify::note custMobileNo every time change different number
+BrandFactory::0-prameter constructor
+After Save::BrandFactory(custMobileNo=23234, custName=Sanka1, custAddr=tanu1, rewardPoints=811)
+ BrandFactory::0-prameter constructor
+Hibernate: 
+    select
+        brandfacto0_.CUSTMOBILENO as CUSTMOBILENO1_0_0_,
+        brandfacto0_.CUSTNAME as CUSTNAME2_0_0_,
+        brandfacto0_.CUSTADDR as CUSTADDR3_0_0_,
+        brandfacto0_.REWARDPOINTS as REWARDPOINTS4_0_0_ 
+    from
+        BRANDFACTORY brandfacto0_ 
+    where
+        brandfacto0_.CUSTMOBILENO=?
+ BrandFactory::0-prameter constructor
+After merge::BrandFactory(custMobileNo=0, custName=null, custAddr=null, rewardPoints=0)
+Hibernate: 
+    insert 
+    into
+        BRANDFACTORY
+        (CUSTNAME, CUSTADDR, REWARDPOINTS, CUSTMOBILENO) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        BRANDFACTORY 
+    set
+        CUSTNAME=?,
+        CUSTADDR=?,
+        REWARDPOINTS=? 
+    where
+        CUSTMOBILENO=?
+Object Updated
+
+
+SQL> select * from brandfactory;
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+  1.0000E+10 Sankar               AP                              8
+     8799999 Sanka                tanuku1                        81
+    67999999 S                    u                             811
+     9999999 Sankar               AP                              8
+       99999 Sankar               AP                              8
+  1.0000E+10 Sankar1              AP                              8
+    99999999 Sanka                tanuku                         81
+       23234 S1                   u2                            811
+  9999999999 Sankar1              AP                              8
+   999999999 Sankar               Razole                          1
+      999999 Sankar1              A                              81
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+           0                                                      0
+
+12 rows selected.
