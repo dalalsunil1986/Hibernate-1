@@ -1,0 +1,52 @@
+SQL> create table brandfactory(custMobileNo number(12) primary key,custName varchar2(20),custAddr varchar2(20),rewardPoints number(5));
+
+Table created.
+
+SQL> select * from brandfactory;
+
+no rows selected
+
+
+
+modify::after compile::
+
+BrandFactory::0-prameter constructor
+ BrandFactory::0-prameter constructor
+Hibernate: 
+    select
+        brandfacto0_.CUSTMOBILENO as CUSTMOBILENO1_0_0_,
+        brandfacto0_.CUSTNAME as CUSTNAME2_0_0_,
+        brandfacto0_.CUSTADDR as CUSTADDR3_0_0_,
+        brandfacto0_.REWARDPOINTS as REWARDPOINTS4_0_0_ 
+    from
+        BRANDFACTORY brandfacto0_ 
+    where
+        brandfacto0_.CUSTMOBILENO=?
+ BrandFactory::0-prameter constructor
+Hibernate: 
+    select
+        max(CUSTMOBILENO) 
+    from
+        BRANDFACTORY
+After Merge::BrandFactory(custMobileNo=10000000001, custName=Sankar1, custAddr=AP, rewardPoints=8)
+Hibernate: 
+    insert 
+    into
+        BRANDFACTORY
+        (CUSTNAME, CUSTADDR, REWARDPOINTS, CUSTMOBILENO) 
+    values
+        (?, ?, ?, ?)
+Object Updated
+
+
+
+CUSTMOBILENO CUSTNAME             CUSTADDR             REWARDPOINTS
+------------ -------------------- -------------------- ------------
+  1.0000E+10 Sankar               AP                              8
+     9999999 Sankar               AP                              8
+       99999 Sankar               AP                              8
+  1.0000E+10 Sankar1              AP                              8
+  9999999999 Sankar1              AP                              8
+   999999999 Sankar               Razole                          1
+
+6 rows selected.
