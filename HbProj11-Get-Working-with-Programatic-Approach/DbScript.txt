@@ -1,4 +1,4 @@
- Query:
+Query:
  
  create table insurencepolicy(policyId number(8) primary key
  ,policyName varchar(20),policyHolderName varchar2(20),
@@ -35,23 +35,25 @@ SQL> select * from insurencepolicy;
        102 k                    govardan                   1400
        103 s                    narendra                    900
    output::    
-   
-   
-   InsurencePolicy.InsurencePolicy()::0-parameter constructor
+       
+     
+ 
+
+ InsurencePolicy.InsurencePolicy()::0-parameter constructor
 equals
 toString
 hashCode
 clone
 writeReplace
-getTenure
-getPolicyName
-getPolicyId
 getPolicyHolderName
+getPolicyId
+getPolicyName
+getTenure
+$$_hibernate_set_interceptor
+getHibernateLazyInitializer
+setPolicyId
 setPolicyName
 setTenure
-setPolicyId
-getHibernateLazyInitializer
-$$_hibernate_set_interceptor
 setPolicyHolderName
 
  Record or Object found, Details::
@@ -65,3 +67,5 @@ InsurencePolicy.getPolicyName()
 InsurencePolicy.getPolicyHolderName()
 InsurencePolicy.getTenure()
 101	h	sankar	1000
+ 
+     
