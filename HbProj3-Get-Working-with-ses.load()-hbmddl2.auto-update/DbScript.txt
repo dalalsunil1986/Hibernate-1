@@ -1,0 +1,48 @@
+ 
+Hibernate: 
+    
+    drop table INSURENCEPOLICY1 cascade constraints
+    
+    
+    Hibernate: 
+    
+    create table INSURENCEPOLICY1 (
+       POLICYID number(10,0) not null,
+        POLICYNAME varchar2(15 char),
+        POLICYHOLDERNAME varchar2(15 char),
+        TENURE number(10,0),
+        primary key (POLICYID)
+    )
+    
+    InsurencePolicy.InsurencePolicy()::0-parameter constructor
+equals
+toString
+hashCode
+clone
+writeReplace
+getPolicyId
+getTenure
+getPolicyName
+getPolicyHolderName
+getHibernateLazyInitializer
+$$_hibernate_set_interceptor
+setPolicyHolderName
+setPolicyId
+setTenure
+setPolicyName
+
+ Record or Object found, Details::
+
+Hibernate: 
+    select
+        insurencep0_.POLICYID as POLICYID1_0_0_,
+        insurencep0_.POLICYNAME as POLICYNAME2_0_0_,
+        insurencep0_.POLICYHOLDERNAME as POLICYHOLDERNAME3_0_0_,
+        insurencep0_.TENURE as TENURE4_0_0_ 
+    from
+        INSURENCEPOLICY1 insurencep0_ 
+    where
+        insurencep0_.POLICYID=?
+    
+    
+     
