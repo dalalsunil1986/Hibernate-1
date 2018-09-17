@@ -1,0 +1,42 @@
+
+
+create table employee(eid number(5) primary key,ename varchar(20),email
+varchar(20),salary number(10));
+
+
+
+SQL> desc employee
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                       NOT NULL NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ EMAIL                                              VARCHAR2(30)
+ SALARY                                             NUMBER(10)
+ 
+ CONSOLE OUTPUT:
+ 
+SQL> desc employee12;
+ERROR:
+ORA-04043: object employee12 does not exist
+
+
+SQL> desc EMPLOYEE12;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                       NOT NULL NUMBER(10)
+ ENAME                                              VARCHAR2(255 CHAR)
+ EMAIL                                              VARCHAR2(255 CHAR)
+ SALARY                                             NUMBER(10)
+
+SQL> desc EMPLOYEE12;
+ERROR:
+ORA-04043: object EMPLOYEE12 does not exist
+
+Check for Table creation......
+Object Saved / Record is Inserted
+
+Check for Database table Deletion
+
+
+
