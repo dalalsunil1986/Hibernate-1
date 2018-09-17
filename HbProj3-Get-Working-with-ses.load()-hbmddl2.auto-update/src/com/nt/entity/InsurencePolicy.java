@@ -9,6 +9,7 @@ public class InsurencePolicy implements Serializable {
 	private String policyName;
 	private String policyHolderName;
 	private int tenure;
+	private String provider;
 	
 	public InsurencePolicy() {
 		
@@ -77,6 +78,16 @@ public class InsurencePolicy implements Serializable {
 		
 		this.tenure = tenure;
 		
+	}
+
+	public String getProvider() {
+		
+		return provider;
+	}
+
+	public void setProvider(String provider) {
+		
+		this.provider = provider;
 	}
 	
 	

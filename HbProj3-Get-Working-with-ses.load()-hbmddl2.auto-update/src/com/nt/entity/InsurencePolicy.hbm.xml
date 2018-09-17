@@ -38,6 +38,12 @@
  
 </property>
 
+<property name="provider" type="string">
+
+<column name="PROVIDER" length="15"/>
+ 
+</property>
+
 </class>
 
 </hibernate-mapping>

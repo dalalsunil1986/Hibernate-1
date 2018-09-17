@@ -45,4 +45,48 @@ Hibernate:
         insurencep0_.POLICYID=?
     
     
-     
+     Hibernate: 
+    
+    alter table SCOTT.INSURENCEPOLICY 
+       add PROVIDER varchar2(15 char)
+InsurencePolicy.InsurencePolicy()::0-parameter constructor
+equals
+toString
+hashCode
+clone
+writeReplace
+getPolicyId
+getPolicyName
+getTenure
+getPolicyHolderName
+getProvider
+getHibernateLazyInitializer
+$$_hibernate_set_interceptor
+setPolicyHolderName
+setTenure
+setProvider
+setPolicyName
+setPolicyId
+
+ Record or Object found, Details::
+
+Hibernate: 
+    select
+        insurencep0_.POLICYID as POLICYID1_0_0_,
+        insurencep0_.POLICYNAME as POLICYNAME2_0_0_,
+        insurencep0_.POLICYHOLDERNAME as POLICYHOLDERNAME3_0_0_,
+        insurencep0_.TENURE as TENURE4_0_0_,
+        insurencep0_.PROVIDER as PROVIDER5_0_0_ 
+    from
+        INSURENCEPOLICY insurencep0_ 
+    where
+        insurencep0_.POLICYID=?
+InsurencePolicy.InsurencePolicy()::0-parameter constructor
+InsurencePolicy.setPolicyId()
+InsurencePolicy.setPolicyName()
+InsurencePolicy.setPolicyHolderName()
+InsurencePolicy.setTenure()
+InsurencePolicy.getPolicyName()
+InsurencePolicy.getPolicyHolderName()
+InsurencePolicy.getTenure()
+101	h	sankar	1000
