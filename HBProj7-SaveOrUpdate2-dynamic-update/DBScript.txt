@@ -9,22 +9,14 @@ no rows selected
 
 
 Hibernate: 
-    select
-        brandfacto_.CUSTMOBILENO,
-        brandfacto_.CUSTNAME as CUSTNAME2_0_,
-        brandfacto_.CUSTADDR as CUSTADDR3_0_,
-        brandfacto_.REWARDPOINTS as REWARDPOINTS4_0_ 
-    from
-        BRANDFACTORY brandfacto_ 
+    update
+        BRANDFACTORY 
+    set
+        CUSTNAME=?,
+        CUSTADDR=?,
+        REWARDPOINTS=? 
     where
-        brandfacto_.CUSTMOBILENO=?
-Hibernate: 
-    insert 
-    into
-        BRANDFACTORY
-        (CUSTNAME, CUSTADDR, REWARDPOINTS, CUSTMOBILENO) 
-    values
-        (?, ?, ?, ?)
+        CUSTMOBILENO=?
 Object Updated
 
 
