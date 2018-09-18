@@ -1,0 +1,34 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query
+ 
+ Hibernate: 
+    
+    create table STUDENT1 (
+       SNO number(10,0) not null,
+        SNAME varchar2(20 char),
+        SADD varchar2(20 char),
+        primary key (SNO)
+    )
+Student:: 0-parameter Constructor
+Generator Id value::123
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Object Updated
+
+SQL> select * from student1;
+
+       SNO SNAME                SADD
+---------- -------------------- --------------------
+       123 Sankar               Razole
