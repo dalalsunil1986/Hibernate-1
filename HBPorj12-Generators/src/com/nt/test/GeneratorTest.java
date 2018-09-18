@@ -32,7 +32,7 @@ public class GeneratorTest {
 		
 		st=new Student();
 		
-		st.setSno(123);
+		st.setSno(1231);
 		st.setSname("Sankar");
 		st.setSadd("Razole");
 		

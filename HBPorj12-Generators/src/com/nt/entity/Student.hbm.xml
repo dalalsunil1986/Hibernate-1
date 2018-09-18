@@ -19,7 +19,11 @@
 
 <column name="SNO" length="5"/>
 
-<generator class="assigned"></generator>
+<!--  <generator class="assigned"></generator> or-->
+
+<generator class="org.hibernate.id.Assigned"></generator>
+
+
 
 </id>
 

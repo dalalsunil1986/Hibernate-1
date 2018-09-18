@@ -6,7 +6,10 @@ SQL> desc student1;
  SADD                                               VARCHAR2(20 CHAR)
 
  
- using hbm2ddl.auto--->auto generate the Query
+ using hbm2ddl.auto--->auto generate the Query::
+ 
+ 
+ Student:: 0-parameter Constructor
  
  Hibernate: 
     
