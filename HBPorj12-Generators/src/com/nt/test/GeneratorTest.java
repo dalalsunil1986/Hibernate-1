@@ -9,7 +9,7 @@ import com.nt.utility.HibernateUtil;
 
 public class GeneratorTest {
 	
-	@SuppressWarnings("unused")
+	
 	public static void main(String[] args) {
 		
 		//Bootstrapping Hibernate
