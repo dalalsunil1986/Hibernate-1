@@ -1,0 +1,54 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dbjava             |
+| hibernate          |
+| information_schema |
+| mysql              |
+| new_schema         |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+9 rows in set (6.20 sec)
+
+mysql> connect hibernate;
+Connection id:    9
+Current database: dbjava
+
+mysql> desc student1;
+ERROR 1146 (42S02): Table 'dbjava.student1' doesn't exist
+
+Student:: 0-parameter Constructor
+
+Student:: 0-parameter Constructor
+Generator Id value::104
+Object Updated
+
+
+mysql> desc student121;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| SNO   | int(11)     | NO   | PRI | NULL    |       |
+| SNAME | varchar(20) | YES  |     | NULL    |       |
+| SADD  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (5.63 sec)
+
+mysql> select * from student121;
++-----+--------+--------+
+| SNO | SNAME  | SADD   |
++-----+--------+--------+
+| 109 | Sankar | Razole |
+| 104 | Sankar | Razole |
++-----+--------+--------+
+2 rows in set (0.25 sec)
+
+
+
+
+
+
