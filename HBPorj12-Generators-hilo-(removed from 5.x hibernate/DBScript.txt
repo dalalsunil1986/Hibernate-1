@@ -1,0 +1,25 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query::
+ 
+ 
+ Student:: 0-parameter Constructor
+ 
+SQL> create table hi_tab(hi_col number(5));
+
+Table created.
+
+SQL> insert into hi_tab values(10);
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+ 
