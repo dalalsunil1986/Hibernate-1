@@ -1,0 +1,45 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query::
+ 
+ 
+ Student:: 0-parameter Constructor
+ 
+SQL> create sequence sno_sequence start with 100 increment by 1;
+
+
+
+Sequence created.
+
+SQL> commit;
+
+Commit complete.
+
+Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        sno_sequence.nextval 
+    from
+        dual
+Generator Id value::100
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Object Updated
+
+
+SQL> select * from student1;
+
+       SNO SNAME                SADD
+---------- -------------------- --------------------
+       123 Sankar               Razole
