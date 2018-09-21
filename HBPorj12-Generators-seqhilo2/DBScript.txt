@@ -1,0 +1,118 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query::
+ 
+ 
+ Student:: 0-parameter Constructor
+ 
+SQL> create table hi_tab(hi_col number(5));
+
+Table created.
+
+SQL> create sequence seq start with 100 increment by 10;
+
+Sequence created.
+
+SQL> commit;
+
+Commit complete.
+
+Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        seq.nextval 
+    from
+        dual
+Generator Id value::600
+Student:: 0-parameter Constructor
+Generator Id value::601
+Student:: 0-parameter Constructor
+Generator Id value::602
+Student:: 0-parameter Constructor
+Generator Id value::603
+Student:: 0-parameter Constructor
+Generator Id value::604
+Student:: 0-parameter Constructor
+Generator Id value::605
+Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        seq.nextval 
+    from
+        dual
+Generator Id value::660
+Student:: 0-parameter Constructor
+Generator Id value::661
+Student:: 0-parameter Constructor
+Generator Id value::662
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Object Updated
+
