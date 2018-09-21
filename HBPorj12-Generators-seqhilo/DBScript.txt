@@ -1,0 +1,119 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query::
+ 
+ 
+ Student:: 0-parameter Constructor
+ 
+SQL> create table hi_tab(hi_col number(5));
+
+Table created.
+
+SQL> insert into hi_tab values(10);
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+
+Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        hibernate_sequence.nextval 
+    from
+        dual
+Generator Id value::126
+Student:: 0-parameter Constructor
+Generator Id value::127
+Student:: 0-parameter Constructor
+Generator Id value::128
+Student:: 0-parameter Constructor
+Generator Id value::129
+Student:: 0-parameter Constructor
+Generator Id value::130
+Student:: 0-parameter Constructor
+Generator Id value::131
+Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        hibernate_sequence.nextval 
+    from
+        dual
+Generator Id value::132
+Student:: 0-parameter Constructor
+Generator Id value::133
+Student:: 0-parameter Constructor
+Generator Id value::134
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        STUDENT1
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Object Updated
+ 
