@@ -1,0 +1,79 @@
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1  create or replace trigger  SNO_TRGR
+  2       before insert  on Student15  for each row
+  3       declare
+  4          stno number(5);
+  5    begin
+  6       -- get sequence generated value
+  7       select   sno_seq.nextVal into stno from dual;
+  8      -- update sno with sequence value
+  9       :new.sno:=stno;
+ 10*   end;
+ 11  /
+
+Trigger created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> alter table student15 add email varchar2(30);
+
+Table altered.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> desc student15;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL VARCHAR2(40 CHAR)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+ EMAIL                                              VARCHAR2(30)
+
+
+
+SNO                                      SNAME                SADD
+---------------------------------------- -------------------- --------------------
+EMAIL
+------------------------------
+3cd80da8-5e3a-4990-bb9e-a8ff6d9d2a01     Sankar               Razole
+
+
+4028808965fca1f70165fca2035c0000         Sankar               Razole
+
+
+5BDF25CCA6084C17A27787743A5EA948         Sankar               Razole
+
+
+81                                       Sankar               Razole
+sankar@gmail
+
+
+SQL>
+
+ 
+ using hbm2ddl.auto--->auto generate the Query
+ 
+Student:: 0-parameter Constructor
+Hibernate: 
+    insert 
+    into
+        STUDENT15
+        (SNAME, SADD, EMAIL) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    select
+        SNO 
+    from
+        STUDENT15 
+    where
+        SNAME =?
+Generator Id value::3cd80da8-5e3a-4990-bb9e-a8ff6d9d2a01
+Object Updated
