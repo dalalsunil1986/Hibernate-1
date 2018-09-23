@@ -1,0 +1,39 @@
+
+SQL>  create  sequence nit_seq start with 001 increment by 1;
+
+Sequence created.
+
+SQL> commit;
+
+Commit complete.
+
+
+Hibernate: 
+    
+    create table LuckyDrawCupon11 (
+       cuponNumber varchar2(40 char) not null,
+        custName varchar2(30 char),
+        custMobileNumber number(19,0),
+        custAddrs varchar2(30 char),
+        primary key (cuponNumber)
+    )
+Hibernate: 
+    
+    alter table LuckyDrawCupon11 
+       drop constraint UK_1qddbwdtjohfu40nqblu889xa
+Hibernate: 
+    
+    alter table LuckyDrawCupon11 
+       add constraint UK_1qddbwdtjohfu40nqblu889xa unique (custMobileNumber)
+customIdGenerator.generate()
+Internal Problem in generating ID value::ORA-02289: sequence does not exist
+
+CustomGeneratorTest::NIT0000
+Hibernate: 
+    insert 
+    into
+        LuckyDrawCupon11
+        (custName, custMobileNumber, custAddrs, cuponNumber) 
+    values
+        (?, ?, ?, ?)
+Object Saved
