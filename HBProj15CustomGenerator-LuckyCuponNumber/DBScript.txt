@@ -1,0 +1,13 @@
+
+customIdGenerator.customIdGenerator()
+
+customIdGenerator.generate()
+CustomGeneratorTest::6181001769693669368
+Hibernate: 
+    insert 
+    into
+        LuckyDrawCupon
+        (custName, custMobileNumber, custAddrs, cuponNumber) 
+    values
+        (?, ?, ?, ?)
+Object Saved
