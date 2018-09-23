@@ -1,0 +1,33 @@
+
+customIdGenerator.customIdGenerator()
+
+customIdGenerator.generate()
+customIdGenerator.generate()
+CustomGeneratorTest::454
+Hibernate: 
+    insert 
+    into
+        LuckyDrawCupon
+        (custName, custMobileNumber, custAddrs, cuponNumber) 
+    values
+        (?, ?, ?, ?)
+Object Saved
+
+
+SQL> desc LuckydrawCupon;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ CUPONNUMBER                                           NOT NULL NUMBER(19)
+ CUSTNAME                                                       VARCHAR2(30 CHAR)
+ CUSTMOBILENUMBER                                               NUMBER(19)
+ CUSTADDRS                                                      VARCHAR2(30 CHAR)
+ 
+ 
+CUPONNUMBER CUSTNAME                       CUSTMOBILENUMBER CUSTADDRS
+----------- ------------------------------ ---------------- ------------------------------
+ 6.1810E+18 Sankar                               9494624217 razole
+        283 Sankar1                                 9494627 razole1
+        454 Sankar11                               94946217 razole11
+ 
+ 
+

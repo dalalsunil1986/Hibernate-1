@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+
+ <class name="com.nt.entity.LuckyDrawCupon">
+
+
+<!-- Singular ID field configuration -->
+
+
+
+<id name="cuponNumber" type="int" length="40">
+
+<generator class="com.nt.generator.CustomCuponIdGenerator"></generator>
+
+</id>
+
+
+<property name="custName" type="string" length="30"/>
+
+
+<property name="custMobileNumber" type="long" unique="true"/>
+
+<property name="custAddrs" type="string" length="30"/>
+
+
+</class>
+
+</hibernate-mapping>
