@@ -1,0 +1,26 @@
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(10)
+ SNAME                                              VARCHAR2(20 CHAR)
+ SADD                                               VARCHAR2(20 CHAR)
+
+ 
+ using hbm2ddl.auto--->auto generate the Query
+ 
+ Student:: 0-parameter Constructor
+Hibernate: 
+    select
+        rawtohex(sys_guid()) 
+    from
+        dual
+        
+        Generator Id value::5BDF25CCA6084C17A27787743A5EA948
+Hibernate: 
+    insert 
+    into
+        STUDENT15
+        (SNAME, SADD, SNO) 
+    values
+        (?, ?, ?)
+Object Updated
