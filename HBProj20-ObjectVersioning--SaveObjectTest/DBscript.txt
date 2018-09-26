@@ -1,0 +1,32 @@
+Hibernate: 
+    
+    create table MNCustomer (
+       custId number(10,0) not null,
+        tuneChangeCount number(10,0) not null,
+        custName varchar2(15 char) not null,
+        mobileNo number(19,0) not null,
+        callerTune varchar2(15 char),
+        primary key (custId)
+    )
+Hibernate: 
+    
+    alter table MNCustomer 
+       drop constraint UK_jgopc9iwtxu3x75fxktg8b4cw
+Hibernate: 
+    
+    alter table MNCustomer 
+       add constraint UK_jgopc9iwtxu3x75fxktg8b4cw unique (mobileNo)
+Hibernate: 
+    select
+        hibernate_sequence.nextval 
+    from
+        dual
+Generated Id Value::61
+Hibernate: 
+    insert 
+    into
+        MNCustomer
+        (tuneChangeCount, custName, mobileNo, callerTune, custId) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved::
