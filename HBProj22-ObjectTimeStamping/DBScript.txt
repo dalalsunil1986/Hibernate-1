@@ -1,0 +1,27 @@
+
+SQL> create table stockinfo(stockId number(5) primary key,stockname varchar2(20),company varchar2(20),price number(10),lastUpdated timestamp);
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+Hibernate: 
+    select
+        hibernate_sequence.nextval 
+    from
+        dual
+Generated Id Value::64
+Hibernate: 
+    insert 
+    into
+        StockInfo
+        (lastUpdated, StockName, company, price, stockId) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved::
+
+SQL> select * from stockinfo;
+        64 SankarStock          PrbSltin                   9000
+26-SEP-18 10.24.12.847000 PM
