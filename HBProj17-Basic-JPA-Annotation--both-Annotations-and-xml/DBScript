@@ -1,0 +1,84 @@
+Hibernate: 
+    
+    create table COLLEGE (
+       ID number(10,0) not null,
+        grade varchar2(5 char),
+        LOCATION varchar2(20 char),
+        NAME varchar2(20 char) not null,
+        STRENGTH number(10,0),
+        primary key (ID)
+    )
+Hibernate: 
+    
+    alter table COLLEGE 
+       drop constraint UK_pa0467ijpbh7fiqjbk2t8ea6i
+Hibernate: 
+    
+    alter table COLLEGE 
+       add constraint UK_pa0467ijpbh7fiqjbk2t8ea6i unique (NAME)
+Hibernate: 
+    insert 
+    into
+        COLLEGE
+        (grade, LOCATION, NAME, STRENGTH, ID) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+Hibernate: 
+    insert 
+    into
+        COLLEGE
+        (grade, LOCATION, NAME, STRENGTH, ID) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+
+SQL> desc college;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(10)
+ GRADE                                              VARCHAR2(5 CHAR)
+ LOCATION                                           VARCHAR2(20 CHAR)
+ NAME                                      NOT NULL VARCHAR2(20 CHAR)
+ STRENGTH                                           NUMBER(10)
+
+SQL> select * from college;
+
+        ID GRADE LOCATION             NAME                   STRENGTH
+---------- ----- -------------------- -------------------- ----------
+       158 A     razole               Sankar                      200
+      1158 A     razole               Sankars                     200
+
+      
+      Hibernate: 
+    select
+        max(id) 
+    from
+        College
+Generated ID value::7890
+Hibernate: 
+    insert 
+    into
+        College
+        (name, location, strength, grade, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+
+SQL> select * from college;
+
+        ID GRADE LOCATION             NAME                   STRENGTH
+---------- ----- -------------------- -------------------- ----------
+      1258 A     razole               Sankar8                     200
+        58 A     razole               Sankar1                     200
+      7890 A     razole               Sankar345                   200
+       158 A     razole               Sankar                      200
+      1158 A     razole               Sankars                     200
+       788 A     razole               Sankar11                    200
+      7881 A     razole               Sankar111                   200
+      7889       razole               Sankar101                   200
+
+8 rows selected.
