@@ -1,0 +1,35 @@
+Hibernate: 
+    
+    create table College (
+       id number(10,0) not null,
+        grade varchar2(255 char),
+        location varchar2(255 char),
+        name varchar2(255 char),
+        strength number(10,0) not null,
+        primary key (id)
+    )
+Hibernate: 
+    select
+        tbl.next_val 
+    from
+        hibernate_sequences tbl 
+    where
+        tbl.sequence_name=? for update
+            
+Hibernate: 
+    update
+        hibernate_sequences 
+    set
+        next_val=?  
+    where
+        next_val=? 
+        and sequence_name=?
+Generated ID value::2
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
