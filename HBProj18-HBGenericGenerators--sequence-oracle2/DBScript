@@ -1,0 +1,31 @@
+create sequence clg-seq start with 100 increment by 1;
+
+Hibernate: 
+    select
+        clg_seq.nextval 
+    from
+        dual
+Generated ID value::100
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+Hibernate: 
+    select
+        gen1.nextval 
+    from
+        dual
+Generated ID value::2
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
