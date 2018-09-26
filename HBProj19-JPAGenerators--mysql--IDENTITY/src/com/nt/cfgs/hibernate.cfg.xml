@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+<!-- connection properties-MYSQL -->
+
+<property name="hibernate.connection.driver-class">com.mysql.jdbc.Driver</property>
+
+ 
+
+<property name="hibernate.connection.url">jdbc:mysql:///hibernate</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">root</property>
+
+<!-- mysql dialect -->
+
+<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+
+ <!-- Hibernate properties -->
+ 
+    <property name="show_sql">true</property>
+    
+    <property name="format_sql">true</property>
+    
+    <property name="hbm2ddl.auto">update</property>
+
+<!-- Mapping File -->
+
+<!-- Here / is not allowed to separate use . symbol and not require any Extension-->
+
+<mapping class="com.nt.entity.College"/>
+
+</session-factory>
+
+
+</hibernate-configuration>
