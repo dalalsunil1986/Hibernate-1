@@ -1,0 +1,85 @@
+Hibernate: 
+    
+    create table College (
+       id integer not null,
+        grade varchar(255),
+        location varchar(255),
+        name varchar(255),
+        strength integer not null,
+        primary key (id)
+    ) engine=MyISAM
+Hibernate: 
+    
+    create table gen1 (
+       next_val bigint
+    ) engine=MyISAM
+Hibernate: 
+    
+    insert into gen1 values ( 1 )
+    
+    Hibernate: 
+    select
+        next_val as id_val 
+    from
+        gen1 for update
+            
+Hibernate: 
+    update
+        gen1 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+
+mysql> desc college;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | int(11)      | NO   | PRI | NULL    |       |
+| grade    | varchar(255) | YES  |     | NULL    |       |
+| location | varchar(255) | YES  |     | NULL    |       |
+| name     | varchar(255) | YES  |     | NULL    |       |
+| strength | int(11)      | NO   |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from college;
++----+-------+----------+-----------+----------+
+| id | grade | location | name      | strength |
++----+-------+----------+-----------+----------+
+|  1 | A     | razole   | Sankars23 |      200 |
++----+-------+----------+-----------+----------+
+1 row in set (0.00 sec)
+
+Hibernate: 
+    select
+        next_val as id_val 
+    from
+        gen1 for update
+            
+Hibernate: 
+    update
+        gen1 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Generated ID value::  3
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+    
