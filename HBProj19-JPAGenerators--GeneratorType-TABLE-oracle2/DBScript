@@ -1,0 +1,67 @@
+Hibernate: 
+    
+    create table ID_TAB (
+       ID_GEN varchar2(255 char) not null,
+        ID_val number(19,0),
+        primary key (ID_GEN)
+    )
+Hibernate: 
+    
+    insert into ID_TAB(ID_GEN, ID_val) values ('ID',100)
+Hibernate: 
+    select
+        tbl.ID_val 
+    from
+        ID_TAB tbl 
+    where
+        tbl.ID_GEN=? for update
+            
+Hibernate: 
+    update
+        ID_TAB 
+    set
+        ID_val=?  
+    where
+        ID_val=? 
+        and ID_GEN=?
+Hibernate: 
+    select
+        tbl.ID_val 
+    from
+        ID_TAB tbl 
+    where
+        tbl.ID_GEN=? for update
+            
+Hibernate: 
+    update
+        ID_TAB 
+    set
+        ID_val=?  
+    where
+        ID_val=? 
+        and ID_GEN=?
+Generated ID value::101
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+
+SQL> desc id_tab;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID_GEN                                    NOT NULL VARCHAR2(255 CHAR)
+ ID_VAL                                             NUMBER(19)
+
+SQL> select * from id_tab;
+
+ID_GEN
+--------------------------------------------------------------------------------
+    ID_VAL
+----------
+ID
+       110
