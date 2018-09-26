@@ -1,0 +1,29 @@
+Hibernate: 
+    select
+        max(id) 
+    from
+        College
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
+
+
+Hibernate: 
+    select
+        max(id) 
+    from
+        College
+Generated ID value::7893
+Hibernate: 
+    insert 
+    into
+        College
+        (grade, location, name, strength, id) 
+    values
+        (?, ?, ?, ?, ?)
+Object is Saved
