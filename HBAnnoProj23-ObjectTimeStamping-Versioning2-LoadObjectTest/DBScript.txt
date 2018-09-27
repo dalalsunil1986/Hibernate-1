@@ -1,0 +1,49 @@
+Hibernate: 
+    
+    create table STOCKINFO1 (
+       stockId number(10,0) not null,
+        StockName varchar2(20 char) not null,
+        UpdationCount number(10,0) not null,
+        company varchar2(30 char) not null,
+        lastUpdated timestamp,
+        listingTime timestamp,
+        price number(10,0) not null,
+        primary key (stockId)
+    )
+Hibernate: 
+    
+    alter table STOCKINFO1 
+       drop constraint UK_ggnh17roj7l86sqhtcm90h8q0
+Hibernate: 
+    
+    alter table STOCKINFO1 
+       add constraint UK_ggnh17roj7l86sqhtcm90h8q0 unique (StockName)
+Hibernate: 
+    select
+        hibernate_sequence.nextval 
+    from
+        dual
+Generated Id Value::81
+Hibernate: 
+    insert 
+    into
+        STOCKINFO1
+        (StockName, UpdationCount, company, lastUpdated, listingTime, price, stockId) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Object is Saved::2018-09-27 21:43:25.824
+
+Hibernate: 
+    select
+        stockinfo0_.stockId as stockId1_0_0_,
+        stockinfo0_.StockName as StockName2_0_0_,
+        stockinfo0_.UpdationCount as UpdationCount3_0_0_,
+        stockinfo0_.company as company4_0_0_,
+        stockinfo0_.lastUpdated as lastUpdated5_0_0_,
+        stockinfo0_.listingTime as listingTime6_0_0_,
+        stockinfo0_.price as price7_0_0_ 
+    from
+        STOCKINFO1 stockinfo0_ 
+    where
+        stockinfo0_.stockId=?
+Object is Saved::2018-09-27 21:43:25.824
