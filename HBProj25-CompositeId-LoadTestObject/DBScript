@@ -1,0 +1,56 @@
+SQL> create table programmers_projects(pid number(5),
+pname varchar2(20),projid number(5),
+projname varchar2(20),primary key(pid,projid));
+
+
+SQL> desc programmers_projects
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(5)
+ PNAME                                              VARCHAR2(20)
+ PROJID                                    NOT NULL NUMBER(5)
+ PROJNAME                                           VARCHAR2(20)
+
+ Generated ID Value::PrgmrProjId(projId=101, pId=1001)
+Hibernate: 
+    insert 
+    into
+        PROGRAMMERS_PROJECTS
+        (pName, projName, projId, pId) 
+    values
+        (?, ?, ?, ?)
+Object is Saved with Composite ID::
+
+
+Generated ID Value::PrgmrProjId(projId=1, pid=11)
+Hibernate: 
+    insert 
+    into
+        PROGRAMMERS_PROJECTS
+        (pname, projName, projId, pid) 
+    values
+        (?, ?, ?, ?)
+Object is Saved with Composite ID
+
+
+SQL> select * from programmers_projects;
+
+       PID PNAME                    PROJID PROJNAME
+---------- -------------------- ---------- --------------------
+      1001 Sankar                      101 proj1
+      1011 Sankar                      111 proj1
+        11 Sankar                        1 proj1
+
+        
+        Hibernate: 
+    select
+        programmer0_.projId as projId1_0_0_,
+        programmer0_.pid as pid2_0_0_,
+        programmer0_.pname as pname3_0_0_,
+        programmer0_.projName as projName4_0_0_ 
+    from
+        PROGRAMMERS_PROJECTS programmer0_ 
+    where
+        programmer0_.projId=? 
+        and programmer0_.pid=?
+Programmers_Projects(id=PrgmrProjId(projId=1, pid=11), pname=Sankar, projName=proj1)
