@@ -1,0 +1,54 @@
+
+mysql> desc employee;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| EID    | int(11)      | NO   | PRI | NULL    |       |
+| ENAME  | varchar(255) | YES  |     | NULL    |       |
+| EMAIL  | varchar(255) | YES  |     | NULL    |       |
+| SALARY | float        | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+4 rows in set (5.17 sec)
+
+mysql> select * from employee;
++-----+--------+--------------------------+--------+
+| EID | ENAME  | EMAIL                    | SALARY |
++-----+--------+--------------------------+--------+
+|   1 | sankar | karrasankar09@gmail.com  |   1500 |
+|  12 | sankar | karrasankar158@gmail.com |   1500 |
++-----+--------+--------------------------+--------+
+2 rows in set (1.75 sec)
+
+mysql> select * from employee;
++-----+--------+--------------------------+--------+
+| EID | ENAME  | EMAIL                    | SALARY |
++-----+--------+--------------------------+--------+
+|   1 | sankar | karrasankar09@gmail.com  |   1500 |
+|  12 | sankar | karrasankar158@gmail.com |   1500 |
+| 102 | sankar | karrasankar158@gmail.com |   1500 |
++-----+--------+--------------------------+--------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+
+SQL> desc employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                       NOT NULL NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ EMAIL                                              VARCHAR2(30)
+ SALARY                                             NUMBER(10)
+
+SQL> select * from employee;
+
+       EID ENAME                EMAIL                              SALARY
+---------- -------------------- ------------------------------ ----------
+       102 sankar               karrasankar158@gmail.com             1500
+       105 sankar               karrasankar158@gmail.com             1500
+       107 sankar               karrasankar158@gmail.com             1500
+       
+       Object is Copied
+       
+       
+
