@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!--table name  BANKACCOUNT capital recomended -->
+
+ <class name="com.nt.entity.Student" table="STUDENT1" >
+
+
+<!-- Singular ID field configuration -->
+
+
+
+<id name="sno" type="int">
+
+<column name="SNO" length="5"/>
+
+<!--  <generator class="assigned"></generator> or-->
+
+<generator class="org.hibernate.id.Assigned"></generator>
+
+
+
+</id>
+
+
+<property name="sname" type="string">
+
+<column name="SNAME" length="20"></column>
+
+</property>
+
+<property name="sadd" type="string">
+
+<column name="SADD" length="20" ></column>
+
+</property>
+
+</class>
+
+</hibernate-mapping>
