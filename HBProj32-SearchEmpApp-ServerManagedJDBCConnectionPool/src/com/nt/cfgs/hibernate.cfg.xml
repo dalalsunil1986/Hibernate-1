@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+<!-- Configure Server Managed JDBCConnectionPool -->
+
+<property name="hibernate.connection.provider_class">org.hibernate.connection.DatasourceConnectionProvider</property>
+
+<property name="hibernate.connection.datasource">java:/comp/env/DSJndi</property>
+
+<!-- Mapping File -->
+
+<mapping class="com.nt.entity.Employee"/>
+
+</session-factory>
+
+</hibernate-configuration>

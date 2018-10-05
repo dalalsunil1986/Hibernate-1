@@ -1,0 +1,34 @@
+
+SQL> desc employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                       NOT NULL NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ EMAIL                                              VARCHAR2(30)
+ SALARY                                             NUMBER(10)
+
+SQL> select * from employee;
+
+       EID ENAME                EMAIL                              SALARY
+---------- -------------------- ------------------------------ ----------
+       102 sankar               karrasankar158@gmail.com             1500
+       105 sankar               karrasankar158@gmail.com             1500
+       107 sankar               karrasankar158@gmail.com             1500
+        30 sankar               karrasankar158@gmail.com             1500
+        50 sankar               karrasankar158@gmail.com             1500
+        67 sankar               karrasankar158@gmail.com             1500
+       909 sankar
+        10 sankar               karrasankar09@gmail.com              1500
+      1078 sankar               karrasankar09@gmail.com              1500
+      1020 sankar               karrasankar158@gmail.com             1500
+       313 sankar               karrasankar09@gmail.com
+
+       
+       Employee Details
+Emp Number::102
+Emp Name::sankar
+Emp Email::karrasankar158@gmail.com
+Emp Salary::1500
+
+
+Home
