@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!-- EMPLOYEE name capital  recomended -->
+
+<class name="com.nt.entity.Employee" table="EMPLOYEE">
+
+<!-- Singular ID filed configuration -->
+
+<!-- ID here EID is primary key in SQL Query -->
+
+<id name="eid" type="int">
+
+<column name="EID" length="10"/>
+
+</id>
+<!-- here string in s in small letter -->
+<property name="ename" type="string">
+
+<column name="ENAME" length="30"/>
+ 
+</property>
+
+<property name="email" type="string">
+
+<column name="EMAIL" length="30"/>
+ 
+</property>
+
+<property name="salary" type="int">
+
+<column name="SALARY" length="15"/>
+ 
+</property>
+
+</class>
+
+</hibernate-mapping>
+
