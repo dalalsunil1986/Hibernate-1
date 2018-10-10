@@ -1,0 +1,60 @@
+Hibernate: 
+    select
+        insurencep0_.POLICYID as POLICYID1_0_0_,
+        insurencep0_.POLICYNAME as POLICYNAME2_0_0_,
+        insurencep0_.POLICYHOLDERNAME as POLICYHOLDERNAME3_0_0_,
+        insurencep0_.TENURE as TENURE4_0_0_ 
+    from
+        INSURENCEPOLICY insurencep0_ 
+    where
+        insurencep0_.POLICYID=?
+InsurencePolicy.InsurencePolicy()::0-parameter constructor
+InsurencePolicy.setPolicyId()
+InsurencePolicy.setPolicyName()
+InsurencePolicy.setPolicyHolderName()
+InsurencePolicy.setTenure()
+
+ Record or Object found, Details::
+
+InsurencePolicy.getPolicyId()
+InsurencePolicy.getPolicyName()
+InsurencePolicy.getPolicyHolderName()
+InsurencePolicy.getTenure()
+101	h	sankar	1000
+InsurencePolicy.getPolicyId()
+InsurencePolicy.getPolicyName()
+InsurencePolicy.getPolicyHolderName()
+InsurencePolicy.getTenure()
+101	h	sankar	1000
+
+Hibernate: 
+    select
+        insurencep0_.POLICYID as POLICYID1_0_0_,
+        insurencep0_.POLICYNAME as POLICYNAME2_0_0_,
+        insurencep0_.POLICYHOLDERNAME as POLICYHOLDERNAME3_0_0_,
+        insurencep0_.TENURE as TENURE4_0_0_ 
+    from
+        INSURENCEPOLICY insurencep0_ 
+    where
+        insurencep0_.POLICYID=?
+InsurencePolicy.InsurencePolicy()::0-parameter constructor
+InsurencePolicy.setPolicyId()
+InsurencePolicy.setPolicyName()
+InsurencePolicy.setPolicyHolderName()
+InsurencePolicy.setTenure()
+InsurencePolicy.setTenure()
+InsurencePolicy.setTenure()
+InsurencePolicy.getPolicyId()
+InsurencePolicy.getPolicyName()
+InsurencePolicy.getPolicyHolderName()
+InsurencePolicy.getTenure()
+Hibernate: 
+    update
+        INSURENCEPOLICY 
+    set
+        POLICYNAME=?,
+        POLICYHOLDERNAME=?,
+        TENURE=? 
+    where
+        POLICYID=?
+Object is Updated
