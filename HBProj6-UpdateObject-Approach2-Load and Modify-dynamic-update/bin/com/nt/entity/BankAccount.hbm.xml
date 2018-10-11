@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!--table name  BANKACCOUNT capital recomended -->
+
+<!--  <class name="com.nt.entity.BankAccount" table="BANKACCOUNT" dynamic-update="true">-->
+
+<class name="com.nt.entity.BankAccount" table="BANKACCOUNT" dynamic-update="false">
+
+<!-- Singular ID field configuration -->
+
+
+
+<id name="accno" type="int">
+
+<column name="ACCNO" length="5"/>
+
+</id>
+
+
+<property name="holderName" type="string">
+
+<column name="HOLDERNAME" length="20"></column>
+
+</property>
+
+<property name="balance" type="float">
+
+<column name="BALANCE" length="20" precision="2"></column>
+
+</property>
+
+<property name="type" type="string">
+
+<column name="TYPE" length="20"></column>
+
+</property>
+
+</class>
+
+</hibernate-mapping>
