@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<!-- PROJECT name capital  recomended -->
+
+<class name="com.nt.entity.Project" table="PROJECT">
+
+<!-- Singular ID filed configuration -->
+
+<!-- ID here EID is primary key in SQL Query -->
+
+<id name="projId" type="int">
+
+<column name="PROJID" length="6"/>
+
+<generator class="increment"></generator>
+
+</id>
+<!-- here string in s in small letter -->
+<property name="projName" type="string">
+
+<column name="PROJNAME" length="30"/>
+ 
+</property>
+
+<property name="teamSize" type="int">
+
+<column name="TEAMSIZE" length="3"/>
+ 
+</property>
+
+<property name="manager" type="string">
+
+<column name="MANAGER" length="30"/>
+ 
+</property>
+
+
+<property name="company" type="string">
+
+<column name="COMPANY" length="30"/>
+ 
+</property>
+
+</class>
+
+</hibernate-mapping>
+

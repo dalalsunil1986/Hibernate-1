@@ -1,0 +1,36 @@
+Hibernate: 
+    select
+        project0_.PROJID as PROJID1_0_,
+        project0_.PROJNAME as PROJNAME2_0_,
+        project0_.TEAMSIZE as TEAMSIZE3_0_,
+        project0_.MANAGER as MANAGER4_0_,
+        project0_.COMPANY as COMPANY5_0_ 
+    from
+        PROJECT project0_
+1001	proj2	20	sankar	nit
+1002	proj3	15	puja	puneTek
+
+
+SQL> create table project(projId number(6) primary key,projName varchar2(30),teamSize number(3),manager varchar2(20),company varchar2(30));
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+
+
+SQL> insert into project values(1001,'proj2',20,'sankar','nit');
+
+1 row created.
+
+SQL> insert into project values(1002,'proj3',15,'puja','puneTek');
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
